@@ -1,0 +1,600 @@
+body {
+    background: #ffffff;
+    font-size: 22px;
+    line-height: 32px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word !important;
+}
+
+
+/* HIER BEGINNT DIE NAVIGATION */
+
+
+/* Farbbalken */
+
+.multi_color_border {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #00283F 0%, #00283F 25%, #2992A8 25%, #2992A8 50%, #00283F 50%, #00283F 75%, #2992A8 75%, #2992A8 100%);
+}
+
+
+/* obere Navigationsleiste */
+
+.top_nav {
+    height: 30px;
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+
+.top_nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.top_nav ul li a {
+    display: block;
+    margin-left: 8px;
+    padding-right: 40px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #666666;
+}
+
+.top_nav ul li a:hover {
+    display: block;
+    margin-left: 8px;
+    padding-right: 40px;
+    text-decoration: underline;
+    font-size: 12px;
+    color: #666666;
+}
+
+
+/* Hauptnavigationsleiste */
+
+.hamburger,
+[id^=drop] {
+    display: none;
+}
+
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+nav {
+    margin: 0;
+    padding-left: 280px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
+    z-index: 3;
+}
+
+#logo {
+    display: block;
+    float: left;
+    line-height: 70px;
+    height: 40px;
+    margin: 10px 0 0 20px;
+    z-index: 3;
+}
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+    z-index: 3;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+nav ul li {
+    margin-right: 10%;
+    display: inline-block;
+    background-color: #ffffff;
+    z-index: 3;
+}
+
+nav a {
+    display: block;
+    padding: 14px 10px;
+    color: #000000;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 3;
+}
+
+nav ul li ul li:hover {
+    background: #00283F;
+}
+
+nav a:hover {
+    font-weight: bold;
+    color: #2992A8;
+    z-index: 3;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    z-index: 3;
+}
+
+nav ul li:hover>ul {
+    display: inherit;
+    z-index: 3;
+}
+
+nav ul ul li {
+    width: auto;
+    float: none;
+    display: list-item;
+    position: relative;
+    background: #ffffff;
+    border-bottom: 1px solid #bababa;
+    z-index: 3;
+}
+
+nav ul ul li a {
+    font-weight: normal;
+    color: #00283F;
+    z-index: 3;
+}
+
+nav ul ul li a:hover {
+    font-weight: normal;
+    color: #ffffff;
+    z-index: 3;
+}
+
+
+/* "Handymodus" */
+
+@media all and (max-width: 768px) {
+    #logo {
+        display: block;
+        float: left;
+        line-height: 70px;
+        height: 40px;
+        margin: 10px 0 0 20px;
+    }
+    nav {
+        margin: 0 0 0 -280px;
+    }
+    .toggle+a,
+    .menu {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        background-color: #ffffff;
+        padding: 14px 20px;
+        color: #000000;
+        size: 17px;
+        text-decoration: none;
+        border: none;
+        float: right;
+    }
+    .toggle {
+        display: block;
+        background-color: #2992A8;
+        padding: 14px 20px;
+        color: #FFF;
+        font-size: 17px;
+        text-decoration: none;
+        border: none;
+    }
+    .toggle:hover {
+        background-color: #00283F;
+    }
+    [id^=drop]:checked+ul {
+        display: block;
+        width: 100%;
+    }
+    nav ul li {
+        display: block;
+        width: 100%;
+        float: left;
+    }
+    nav ul ul .toggle,
+    nav ul ul a {
+        padding: 0 40px;
+    }
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: #00283F;
+    }
+    nav ul li ul li .toggle,
+    nav ul ul a,
+    nav ul ul ul a {
+        padding: 14px 20px;
+        color: #FFF;
+        font-size: 17px;
+    }
+    nav ul li ul li .toggle,
+    nav ul ul a {
+        background-color: #ffffff;
+        color: #00283F;
+    }
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+    }
+    nav ul ul li:hover>ul,
+    nav ul li:hover>ul {
+        display: none;
+    }
+    nav ul ul li {
+        display: block;
+        width: 100%;
+        border-bottom: none;
+    }
+    nav ul ul ul li {
+        position: static;
+    }
+}
+
+@media all and (max-width: 330px) {
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+}
+
+
+/*Voraussetzungen für Slideshow*/
+
+#slider {
+    overflow: hidden;
+    z-index: 1;
+    min-height: 550px;
+}
+
+
+/* Einstellungen für Slide*/
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+    z-index: 1;
+    min-height: 550px;
+}
+
+#slider figure img {
+    width: 20%;
+    z-index: 1;
+    min-height: 550px;
+}
+
+
+/*Slider Durchlaufen*/
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+
+/*Boxen-Design*/
+
+.box {
+    display: block;
+    padding: 30px;
+    background-color: #00283F;
+    border: 1px solid black;
+    width: 15%;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+    opacity: 0.9;
+}
+
+
+/* Überschriften in den Boxen*/
+
+.box h1 {
+    color: white;
+    font-size: 30px;
+    z-index: 2;
+    text-align: center;
+}
+
+
+/*Abstand Überschrift und Unterpunkte in Box*/
+
+.box div h1 {
+    display: block;
+    color: black;
+    height: 50px;
+    text-align: center;
+}
+
+
+/*Text-decoration Unterpunkte*/
+
+.box li {
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/*Abstande Unterpunkte*/
+
+.box a {
+    text-align: left;
+    margin: 20px;
+    vertical-align: left;
+    height: 20px;
+    display: inline-block;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/* Unterpunkte Hovern*/
+
+div a:hover,
+div a:active {
+    text-decoration: underline;
+    color: grey;
+}
+
+
+/* Anordnung der Boxen*/
+
+.nav-links {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* Responsive Design*/
+
+@media all and (max-width: 1500px) {
+    .box {
+        display: block;
+        padding: 0px;
+        position: relative;
+        margin: 5px;
+        margin-top: 5px;
+        min-height: 50px;
+        min-width: 200px;
+    }
+    .box a {
+        text-align: left;
+        margin: 0px;
+        vertical-align: left;
+        display: inline-block;
+        font-size: 12px;
+    }
+    .box h1 {
+        font-size: 15px;
+        height: 10px;
+        padding: 0px;
+    }
+}
+
+@media all and (max-width: 650px) {
+    .box {
+        display: block;
+        padding: 0px;
+        position: relative;
+        margin: 5px;
+        margin-top: 5px;
+        min-height: 50px;
+        min-width: 200px;
+    }
+    .box a {
+        display: block;
+        margin-top: 10px;
+        font-size: 10px;
+        padding: 5px;
+        margin: 5px;
+        text-align: center;
+    }
+    .box h1 {
+        display: block;
+        font-size: 15px;
+        height: 10px;
+        padding: 10px;
+        margin-top: 0px;
+    }
+}
+
+
+/* Container für den Text*/
+
+.container2 {
+    max-width: 1170px;
+    margin: auto;
+    z-index: 5;
+}
+
+
+/*Container for the bockes*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 5;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* footer overlay*/
+
+.footer {
+    background-color: #00283F;
+    padding: 70px 0;
+}
+
+
+/* Container for the singel bockes*/
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+
+/* Überschrift der Boxen*/
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+/*blauer desgin balcken*/
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #2992A8;
+    height: 2px;
+    box-sizing: border-box;
+    width: 180px;
+}
+
+.footer-col ul {
+    padding: 0px;
+}
+
+
+/*abstand zwischen dem text*/
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
+/*Text bearbeitung*/
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+
+/*hover effekt für die Schfrit*/
+
+.footer-col ul li a:hover {
+    color: #2992A8;
+    padding-left: 8px;
+}
+
+
+/* bearbeitung der Kreise für Sozial media*/
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+
+/* Farbe der einzelen socialmeda icons*/
+
+.footer-col .social-links a:hover {
+    color: #ffffff;
+    background-color: #2992A8;
+}
+
+
+/*responsive desgin*/
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}

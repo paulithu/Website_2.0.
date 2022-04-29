@@ -1,0 +1,130 @@
+    /*existiert zur Trennung zwischen allgmeinen Styles und speziellen Styles, welche die allgemeinen überschreiben*/
+    /* legt speziell für Laborausstattung fest, wie die PDF etc. Links aussehen*/
+    
+    #body a {
+        font-family: 'clear_sans_thinregular', sans-serif;
+        color: #00283F;
+    }
+    /*Designed den Header Hintergrund-> Nav und h1*/
+    
+    header {
+        background-image: url("Bilder/Picture.png");
+        background-size: cover;
+        padding-bottom: 10px;
+        padding-top: 0px;
+    }
+    
+    main {
+        padding-left: 2%;
+    }
+    
+    .wrapper {
+        /* verändert die Breite des blauen Main Seitenrandes*/
+        padding-bottom: 50px;
+        /*Abstand zum Footer*/
+        margin: auto;
+    }
+    /*designed die special nav Elemente etc*/
+    
+    #special {
+        padding: 5px;
+        box-shadow: 0px 3px 15px;
+        background-color: rgba(41, 146, 168, 60%);
+    }
+    /*designed die die Anordnung der ganzen Elemente in special */
+    
+    #special ul {
+        display: block;
+        padding-left: 5%;
+    }
+    /*designed die wie die Einzelnen Listenelemente angeordnet sind + Hintergrund*/
+    
+    #special ul li {
+        display: block;
+        background-color: inherit;
+    }
+    /* designed die Listenelementen*/
+    
+    #special a {
+        display: block;
+        padding: 5px;
+        font-size: 17px;
+        color: #00283F;
+    }
+    /*desigend den Hover*/
+    
+    #special a:hover {
+        text-decoration: underline;
+        color: #00283F;
+        background-color: inherit;
+    }
+    /* designed die einzelnen Labore-> Abstände*/
+    
+    section {
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-bottom: 75px;
+        border-top: 5px solid #00283F;
+        /* blaue Linie zwischen den Sektionen*/
+    }
+    /*sorgt für die Quadrate am Anfang der Listenelemente*/
+    
+    section ul {
+        list-style-type: square;
+    }
+    /* Sorgt für den Abstand der Texte*/
+    
+    section li,
+    section p {
+        padding-right: 10%;
+    }
+    /* designed die Bilder der Sektionen*/
+    
+    .card img {
+        width: 48%;
+        height: 48%;
+        margin: 0 auto;
+        min-width: 200px;
+        /* damit die Bilder nicht zu klein werden*/
+    }
+    /*designed den Abstand der Bilder zu der blauen Linie*/
+    
+    figure {
+        margin-bottom: 0;
+    }
+    /*positioniert die Bildunterschrift*/
+    
+    figcaption {
+        text-align: center;
+    }
+    /*sorgt dafür, dass immer zwei Bilder nebeneinander sind*/
+    
+    figure img {
+        margin: 0 auto;
+        display: inline;
+    }
+    /*designed wrapper*/
+    
+    h1 {
+        color: #00283F;
+        text-shadow: 1px 1px 3px white;
+        margin-top: 0px;
+        padding-top: 5px;
+        padding-left: 5%;
+        /* damit die Überschrift besser lesbar ist*/
+    }
+    /*media queries*/
+    
+    @media all and (max-width: 768px) {
+        /*sorgt dafür, dass die Listenelemente vollständig zu sehen sind*/
+        #special {
+            margin: 0;
+        }
+    }
+    /*sorgt dafür, dass die Bildunterschift nicht irgendwann unter etwas leerem steht*/
+    
+    @media (max-width: 577px) {
+        figcaption {
+            text-align: left;
+        }
+    }

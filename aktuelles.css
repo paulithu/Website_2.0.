@@ -1,0 +1,493 @@
+/* HIER BEGINNT DIE NAVIGATION */
+
+
+/* Farbbalken */
+
+.multi_color_border {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #00283F 0%, #00283F 25%, #2992A8 25%, #2992A8 50%, #00283F 50%, #00283F 75%, #2992A8 75%, #2992A8 100%);
+}
+
+
+/* obere Navigationsleiste */
+
+.top_nav {
+    height: 30px;
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+
+.top_nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.top_nav ul li a {
+    display: block;
+    margin-left: 8px;
+    padding-right: 40px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #666666;
+}
+
+.top_nav ul li a:hover {
+    display: block;
+    margin-left: 8px;
+    padding-right: 40px;
+    text-decoration: underline;
+    font-size: 12px;
+    color: #666666;
+}
+
+
+/* Hauptnavigationsleiste */
+
+.hamburger,
+[id^=drop] {
+    display: none;
+}
+
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+nav {
+    margin: 0;
+    padding-left: 280px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
+}
+
+#logo {
+    display: block;
+    float: left;
+    line-height: 70px;
+    height: 40px;
+    margin: 10px 0 0 20px;
+}
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 10%;
+    display: inline-block;
+    background-color: #ffffff;
+}
+
+nav a {
+    display: block;
+    padding: 14px 10px;
+    color: #000000;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li ul li:hover {
+    background: #00283F;
+}
+
+nav a:hover {
+    font-weight: bold;
+    color: #2992A8;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+
+nav ul li:hover>ul {
+    display: inherit;
+}
+
+nav ul ul li {
+    width: auto;
+    float: none;
+    display: list-item;
+    position: relative;
+    background: #ffffff;
+    border-bottom: 1px solid #bababa;
+}
+
+nav ul ul li a {
+    font-weight: normal;
+    color: #00283F;
+}
+
+nav ul ul li a:hover {
+    font-weight: normal;
+    color: #ffffff;
+}
+
+
+/* "Handymodus" */
+
+@media all and (max-width: 768px) {
+    #logo {
+        display: block;
+        float: left;
+        line-height: 70px;
+        height: 40px;
+        margin: 10px 0 0 20px;
+    }
+    nav {
+        margin: 0 0 0 -280px;
+    }
+    .toggle+a,
+    .menu {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        background-color: #ffffff;
+        padding: 14px 20px;
+        color: #000000;
+        size: 17px;
+        text-decoration: none;
+        border: none;
+        float: right;
+    }
+    .toggle {
+        display: block;
+        background-color: #2992A8;
+        padding: 14px 20px;
+        color: #FFF;
+        font-size: 17px;
+        text-decoration: none;
+        border: none;
+    }
+    .toggle:hover {
+        background-color: #00283F;
+    }
+    [id^=drop]:checked+ul {
+        display: block;
+        width: 100%;
+    }
+    nav ul li {
+        display: block;
+        width: 100%;
+        float: left;
+    }
+    nav ul ul .toggle,
+    nav ul ul a {
+        padding: 0 40px;
+    }
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: #00283F;
+    }
+    nav ul li ul li .toggle,
+    nav ul ul a,
+    nav ul ul ul a {
+        padding: 14px 20px;
+        color: #FFF;
+        font-size: 17px;
+    }
+    nav ul li ul li .toggle,
+    nav ul ul a {
+        background-color: #ffffff;
+        color: #00283F;
+    }
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+    }
+    nav ul ul li:hover>ul,
+    nav ul li:hover>ul {
+        display: none;
+    }
+    nav ul ul li {
+        display: block;
+        width: 100%;
+        border-bottom: none;
+    }
+    nav ul ul ul li {
+        position: static;
+    }
+}
+
+@media all and (max-width: 330px) {
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+}
+
+
+/*Back to Top Button*/
+
+.gotopbtn {
+    position: fixed;
+    width: 40px;
+    background: #00283F;
+    bottom: 40px;
+    left: 93%;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-size: 22px;
+    border: 1px solid white;
+}
+
+.gotopbtn:hover {
+    background-color: #2992A8;
+}
+
+
+/*Damit man smooth nach oben kommt*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Container für den Text*/
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+
+/*Container for the bockes*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* footer overlay*/
+
+.footer {
+    background-color: #00283F;
+    padding: 70px 0;
+}
+
+
+/* Container for the singel bockes*/
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+
+/* Überschrift der Boxen*/
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+/*blauer desgin balcken*/
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #2992A8;
+    height: 2px;
+    box-sizing: border-box;
+    width: 180px;
+}
+
+
+/*abstand zwischen dem text*/
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
+/*Text bearbeitung*/
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+
+/*hover effekt für die Schfrit*/
+
+.footer-col ul li a:hover {
+    color: #2992A8;
+    padding-left: 8px;
+}
+
+
+/* bearbeitung der Kreise für Sozial media*/
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+
+/* Farbe der einzelen socialmeda icons*/
+
+.footer-col .social-links a:hover {
+    color: #ffffff;
+    background-color: #2992A8;
+}
+
+
+/*responsive desgin*/
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+.box {
+    background-color: #2992A8;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #00283F;
+    margin-left: 110px;
+    padding: 20px 30px 50px 75px;
+    color: #00283F;
+}
+
+.p {
+    background-color: ch;
+}
+
+.flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#infosatz {
+    width: 75%;
+    height: 100;
+    padding-left: 10px;
+    box-sizing: border-box;
+    color: white;
+    font-family: medium;
+}
+
+#h5 {
+    color: #002032;
+}
+
+#p {
+    color: white;
+}
+
+#aktuelles {
+    color: #00283F;
+    border-left: 5px solid #2992A8;
+    border-bottom: 5px solid #2992A8;
+    border-top: 5px solid #2992A8;
+    border-right: 5px solid #2992A8;
+    padding: inherit;
+    margin-top: 10px;
+    background-image: url(Pictures/5.3Projekt.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #2992A8;
+    border-color: #00283F;
+    margin-bottom: 100px;
+    margin-top: 80px;
+}
+
+#news {
+    color: white;
+    border-left: 0px solid;
+    border-bottom: 0px solid;
+    border-top: 0px solid;
+    border-right: 0px solid;
+    padding-left: 1000px;
+    padding-top: 200px;
+    margin-top: 80px;
+    background-image: url(Pictures/OptischeMesstechnik_02.JPG);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+
+.wrapper {
+    background-color: #00283F;
+    width: 90%;
+    padding-bottom: 50px;
+    margin: auto;
+    max-width: 1300px;
+}
+
+.main {
+    background-color: #00283F;
+}
