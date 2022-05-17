@@ -1,0 +1,28 @@
+Head:
+<!--cookies-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+   
+   
+Body:
+
+<!-- START Bootstrap-Cookie-Banner -->
+<div class="alert text-center cookiealert" role="alert">
+    <b>Do you like cookies?</b> &#x1F36A; Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. <br> Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu. <a href="https://cookiesandyou.com/" target="_blank">Mehr Infos</a>
+
+    <button type="button" class="btn btn-black-50 btn-sm acceptcookies">
+		Einverstanden    </button>
+</div>
+<!-- END Bootstrap-Cookie-Banner -->
+
+
+Zwischen Body und Html:
+
+<!--Bootstrap Skript für Cookies-->
+<script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+
+
+in js:
+
+window.addEventListener("cookieAlertAccept", function() {
+    alert("cookies accepted")
+})
