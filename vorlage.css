@@ -1,0 +1,639 @@
+body { 
+	background: #ffffff;
+	font-size:22px;
+	line-height: 32px;
+	margin: 0;
+	padding: 0;
+	word-wrap: break-word !important;
+	
+	}
+
+/* HIER BEGINNT DIE NAVIGATION */	
+/* Farbbalken */
+.multi_color_border{
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #00283F 0% , #00283F 25%, #2992A8 25%, #2992A8 50%, #00283F 50%, #00283F 75%, #2992A8 75%, #2992A8 100%);
+}
+
+/* obere Navigationsleiste */
+.top_nav{
+  height: 30px;
+  width: 100%;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.top_nav ul{
+  display: flex;
+  list-style-type:none;
+  padding:10px;
+}
+
+.top_nav ul li a{
+  display: block;
+  padding: 0px 7px 0px 11px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #666666;
+}
+
+.top_nav ul li a:hover{
+  display: block;
+  padding: 0px 7px 0px 11px;
+  text-decoration: underline;
+  font-size: 12px;
+  color: #666666;
+  background: none;
+}
+
+
+/*Back to Top Button*/
+.gotopbtn{
+	position: fixed;
+	width:40px;
+	background: #00283F;
+	bottom: 40px;
+	left: 93%;
+	border-radius: 8px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 40px;
+	color:white;
+	font-size: 22px;
+	border: 1px solid white;
+}
+.gotopbtn:hover {
+	background-color: #2992A8;
+}
+/*Damit man smooth nach oben kommt*/
+
+html{
+scroll-behavior: smooth;
+}
+
+
+/* Hauptnavigationsleiste */
+.hamburger,
+[id^=drop] {
+	display: none;
+}
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+nav { 
+	margin: 0;
+	padding-left: 280px;
+	background-color: #ffffff;
+	box-shadow: 0 3px 15px rgba(0,0,0,.4);
+}
+
+#logo {
+	display: block;
+	float: left;
+	line-height: 70px;
+	height: 40px;
+	margin: 10px 0 0 20px;
+}
+
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+nav ul {
+	display: flex;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	}
+	
+nav ul li {
+	margin-right: 10%;
+	display:inline-block;
+	background-color: #ffffff;
+	}
+
+nav a {
+	display:block;
+	padding:14px 10px;	
+	color:#000000;
+	font-size:17px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav ul li ul li:hover { background: #00283F; }
+
+nav a:hover { 
+	font-weight: bold;
+	color: #2992A8; 
+}
+
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px; 
+}
+	
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+nav ul ul li {
+	width: auto;
+	float: none;
+	display: list-item;
+	position: relative;
+	background: #ffffff;
+	border-bottom: 1px solid #bababa;
+}
+
+nav ul ul li a{
+	font-weight: normal;
+	color: #00283F;
+}
+
+nav ul ul li a:hover{
+	font-weight: normal;
+	color: #ffffff;
+}
+
+
+/* "Handymodus" */
+
+@media all and (max-width : 768px) {
+
+	#logo {
+		display: block;
+		float: left;
+		line-height: 70px;
+		height: 40px;
+		margin: 10px 0 0 20px;
+	}
+
+	nav {
+		margin: 0 0 0 -280px;
+	}
+
+	.toggle + a,
+	.menu {
+		display: none;
+	}
+
+	.hamburger {
+		display: block;
+		background-color: #ffffff;
+		padding:14px 20px;	
+		color:#000000;
+		size:17px;
+		text-decoration:none;
+		border:none;
+		float: right;
+	}
+	
+	.toggle {
+		display: block;
+		background-color: #2992A8;
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px;
+		text-decoration:none;
+		border:none;
+	}
+
+	.toggle:hover {
+		background-color: #00283F;
+	}
+
+	[id^=drop]:checked + ul {
+		display: block;
+		width: 100%;
+	}
+
+	nav ul li {
+		display: block;
+		width: 100%;
+		float: left;
+		}
+
+	nav ul ul .toggle,
+	nav ul ul a {
+		padding: 0 40px;
+	}
+
+	nav ul ul ul a {
+		padding: 0 80px;
+	}
+
+	nav a:hover,
+ 	nav ul ul ul a {
+		background-color: #00283F;
+	}
+  
+	nav ul li ul li .toggle,
+	nav ul ul a,
+  nav ul ul ul a{
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px; 
+	}
+  
+  
+	nav ul li ul li .toggle,
+	nav ul ul a {
+		background-color: #ffffff; 
+		color: #00283F;
+	}
+
+	nav ul ul {
+		float: none;
+		position:static;
+		color: #ffffff;
+	}
+		
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul {
+		display: none;
+	}
+		
+	nav ul ul li {
+		display: block;
+		width: 100%;
+		border-bottom: none;
+	}
+
+	nav ul ul ul li {
+		position: static;
+
+	}
+	.gotopbtn {
+		left: 91%;
+	}
+
+}
+
+@media all and (max-width : 330px) {
+
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+
+	.gotopbtn {
+		left: 80%;
+	}
+}
+@media all and (max-width:400px) {
+    .gotopbtn {
+        left: 85%;
+    }
+}
+
+
+/* Überschrift */
+
+.kasten {
+    position: relative;
+    padding: 50px;
+    background-color: white;
+}
+
+.kasten h1 {
+    color: #00283F;
+    position: relative;
+    font-size: 30px;
+    text-align: left;
+    display: block;
+}
+
+.kasten p {
+    position: relative;
+    color: #00283F;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    margin-bottom: 1%;
+    font-size: 20px;
+}
+
+
+/*Formatierung zu dem Zitat*/
+
+h3 {
+    text-align: center;
+    padding: 40px 15px 40px 15px;
+    width: auto;
+    height: auto;
+    line-height: 45px;
+    /*Damit entsteht die ovale Form*/
+    border: 30px solid #2992A8;
+    border-radius: 100%;
+    background-color: #2992A8;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+i {
+	color: white;
+}
+
+/*Boxen*/
+.container_ {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.container_ .box_ {
+	position: relative;
+	width: 350px;
+	padding: 40px;
+	background: #fff;
+	box-shadow: 0 5px 15px rgba(0,0,0,.1);
+	border-radius: 10px;
+	margin: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-align: center;
+}
+
+.container_ .box_:before {
+	content: '';
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,.2);
+	z-index: 2;
+}
+
+.container_ .box_ ul {
+	text-align: left;
+}
+
+.container_ .box_ .icon_ {
+	position: relative;
+	width: 80px;
+	height: 80px;
+	color: #fff;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	border-radius: 50%;
+	font-size: 40px;
+	font-weight: 700;
+	transition: 1s;
+	margin-bottom: 20px;
+}
+
+.container_ .box_:nth-child(1) .icon_ {
+	box-shadow: 0 0 0 0 #00283F;
+	background: #00283F;
+}
+.container_ .box_:nth-child(1):hover .icon_ {
+	box-shadow: 0 0 0 800px #00283F;
+	background: #00283F;
+}
+
+.container_ .box_:nth-child(2) .icon_ {
+	box-shadow: 0 0 0 0 #00283F;
+	background: #00283F;
+}
+.container_ .box_:nth-child(2):hover .icon_ {
+	box-shadow: 0 0 0 800px #00283F;
+	background: #00283F;
+}
+
+.container_ .box_:nth-child(3) .icon_ {
+	box-shadow: 0 0 0 0 #00283F;
+	background: #00283F;
+}
+.container_ .box_:nth-child(3):hover .icon_ {
+	box-shadow: 0 0 0 800px #00283F;
+	background: #00283F;
+}
+
+.container_ .box_ .content_ {
+	position: relative;
+	z-index: 1;
+	transition: 0.5s;
+}
+.container_ .box_:hover .content_ {
+	color: #fff;
+}
+
+.container_ .box_ .content_ h6 {
+	font-size: 20px;
+	margin: 10px 0;
+	padding: 0;
+}
+
+.container_ .box_ .content_ p {
+	margin: 0;
+	padding: 0;
+}
+
+.container_ .box_ .content_ a {
+	display: inline-block;
+	padding: 10px 20px;
+	background: #fff;
+	border-radius: 4px;
+	text-decoration: none;
+	color: #000;
+	font-weight: 500;
+	margin-top: 20px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+
+
+/*Newsletterbox*/
+
+.newsletter {
+    padding: 80px 0;
+    background: #f2f2f2;
+    }
+    
+    .newsletter .content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2; }
+    .newsletter .content h2 {
+    color: #00283F;
+    margin-bottom: 40px; }
+    .newsletter .content .form-control {
+    height: 50px;
+    border-color: #ffffff;
+    border-radius:0;
+    }
+    .newsletter .content.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #00283F;
+    }
+    .newsletter .content .btn {
+    min-height: 50px; 
+    border-radius:0;
+    background: #00283F;
+    color: #fff;
+    font-weight:600;
+    }
+
+
+/*footer beginn*/
+/* Container für den Text*/
+
+/* Footer*/
+/* Container für den Text*/
+
+.container3{
+	max-width: 1170px;
+	margin:auto;
+}
+/*Container for the bockes*/
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+/* footer overlay*/
+.footer{
+	background-color: #00283F;
+    padding: 70px 0;
+}
+/* Container for the singel bockes*/
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+/* Überschrift der Boxen*/
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+/*blauer desgin balcken*/
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #2992A8;
+	height: 2px;
+	box-sizing: border-box;
+	width: 180px;
+}
+.footer-col ul {
+	padding:0px;
+}
+/*abstand zwischen dem text*/
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+/*Text bearbeitung*/
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+/*hover effekt für die Schfrit*/
+.footer-col ul li a:hover{
+	color: #2992A8;
+	padding-left: 8px;
+}
+/* bearbeitung der Kreise für Sozial media*/
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+/* Farbe der einzelen socialmeda icons*/
+.footer-col .social-links a:hover{
+	color: #ffffff;
+	background-color: #2992A8;
+}
+
+/*responsive desgin*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+#aktuelles {
+    color: #00283F;
+    border-left: 5px solid #2992A8;
+    border-bottom: 5px solid #2992A8;
+    border-top: 5px solid #2992A8;
+    border-right: 5px solid #2992A8;
+    padding: inherit;
+    margin-top: 10px;
+    background-image: url(Bilder/5.3Projekt.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #2992A8;
+    border-color: #00283F;
+    margin-bottom: 100px;
+    margin-top: 80px;
+}
+
+#news {
+    color: #000;
+    padding-left: 50%;
+    padding-top: 200px;
+    margin-top: 80px;
+    background-image: url(Bilder/OptischeMesstechnik_02.JPG);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+
+.main {
+    background-color: #00283F;
+}
+
+/* Slider */
+
+
+.carousel-inner {
+	height: 500px;
+}
