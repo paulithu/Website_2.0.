@@ -1,0 +1,31 @@
+#check {
+	display: none;
+}
+
+.content1 {
+	display: none;
+	transition: 0.5s linear;
+}
+
+label {
+	display: inline-block;
+	margin-top: 15px;
+	color: #2992A8;
+	text-decoration: underline;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+#check:checked ~ .content1 {
+	display: block;
+}
+
+#check:checked ~ label {
+	visibility: hidden;
+}
+
+#check:checked ~ label:after {
+	content: 'Weniger anzeigen';
+	display: block;
+	visibility: visible;
+}
