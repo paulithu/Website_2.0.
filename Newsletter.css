@@ -10,9 +10,9 @@
     margin: 0 auto;
     text-align: center;
     position: relative;
-    z-index: 2; }
+    z-index: 2; 
+    color: #00283F; }
     .newsletter .content h2 {
-    color: #00283F;
     margin-bottom: 40px; }
     .newsletter .content .form-control {
     height: 50px;
